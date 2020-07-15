@@ -1,16 +1,15 @@
 language: node_js
+os:
+  - linux
+  - osx
+dist: xenial
+osx_image: xcode12
 node_js:
   - "10"
   - "12"
   - "13"
   - lts/*
   - node
-jobs:
-  include:
-    - os: linux
-      dist: xenial
-    - os: osx
-      osx_image: xcode12
 install: npm ci
 script:
   - npm link
