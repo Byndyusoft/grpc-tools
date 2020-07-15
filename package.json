@@ -2,6 +2,9 @@
   "name": "@byndyusoft/grpc-tools",
   "version": "1.0.0",
   "description": "A set of tools to simplify working with protoc",
+  "engines": {
+    "node": ">=10"
+  },
   "files": [
     "src",
     "README.md",
