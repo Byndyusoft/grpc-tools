@@ -6,6 +6,7 @@ environment:
     - nodejs_version: "14"
 
 install:
+  - git submodule update --init --recursive
   - ps: Install-Product node $env:nodejs_version
   - npm ci
 build_script:
