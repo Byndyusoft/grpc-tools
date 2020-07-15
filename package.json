@@ -1,0 +1,28 @@
+{
+  "name": "@byndyusoft/grpc-tools",
+  "version": "1.0.0",
+  "description": "A set of tools to simplify working with protoc",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byndyusoft/grpc-tools.git"
+  },
+  "keywords": [
+    "grpc",
+    "protoc",
+    "proto3"
+  ],
+  "author": "Byndyusoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Byndyusoft/grpc-tools/issues"
+  },
+  "homepage": "https://github.com/Byndyusoft/grpc-tools#readme"
+}
