@@ -24,5 +24,22 @@
   "bugs": {
     "url": "https://github.com/Byndyusoft/grpc-tools/issues"
   },
-  "homepage": "https://github.com/Byndyusoft/grpc-tools#readme"
+  "homepage": "https://github.com/Byndyusoft/grpc-tools#readme",
+  "dependencies": {
+    "grpc-tools": "^1.9.0",
+    "path-key": "^3.1.1",
+    "protobufjs": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "grpc": "^1.24.3",
+    "grpc-host-builder": "^4.3.2",
+    "grpc-instrumentum": "^2.0.6",
+    "grpc-pbf-loader": "^1.0.2",
+    "jest": "^26.1.0",
+    "make-dir-cli": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
