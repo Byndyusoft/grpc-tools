@@ -12,6 +12,7 @@ node_js:
   - node
 install: npm ci
 script:
+  - go version
   - npm link
   - npm run build
   - npm test
