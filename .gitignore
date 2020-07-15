@@ -105,3 +105,4 @@ dist
 
 # Generated code
 generated/
+src/include
