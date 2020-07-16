@@ -18,7 +18,7 @@ script:
 jobs:
   include:
     - stage: deploy
-      if: branch = master && commit_message !~ /no-deploy/ && env(TRAVIS_PULL_REQUEST) = false
+      if: branch = master && commit_message !~ /no-deploy/ && type != pull_request
       node_js: lts/*
       install: npm ci
       script: npm run build:copy
