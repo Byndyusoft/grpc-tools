@@ -21,7 +21,7 @@ jobs:
       if: branch = master && commit_message !~ /no-deploy/ && type != pull_request
       node_js: lts/*
       install: npm ci
-      script: npm run build:copy
+      script: skip
       deploy:
         provider: npm
         email: litichevskiydv@gmail.com
