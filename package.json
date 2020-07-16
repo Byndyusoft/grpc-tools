@@ -1,0 +1,64 @@
+{
+  "name": "@byndyusoft/grpc-tools",
+  "version": "1.0.0",
+  "description": "A set of tools to simplify working with gRPC",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "js-protoc-gen": "./src/bin/js-protoc-gen.js",
+    "swagger-protoc-gen": "./src/bin/swagger-protoc-gen.js"
+  },
+  "scripts": {
+    "build:copy": "node ./build/copyWellKnownProtos.js",
+    "build:server:protos": "make-dir ./tests/generated/server && js-protoc-gen -r greeter -t static-module -w commonjs --no-verify -o ./tests/generated/server/greeter_pb.js ./tests/protos/greeter.proto",
+    "build:server:types": "make-dir ./tests/generated/server && pbts -o ./tests/generated/server/greeter_pb.d.ts ./tests/generated/server/greeter_pb.js",
+    "build:server:swagger": "make-dir ./tests/generated/server && swagger-protoc-gen --swagger_opt=json_names_for_fields=true --swagger_out=logtostderr=true:./tests/generated/server/ -I ./tests/protos/ greeter.proto",
+    "build:server": "npm run build:server:protos && npm run build:server:types && npm run build:server:swagger",
+    "build:client": "grpc-gen-client --out ./tests/generated/client --include ./tests/protos/ greeter.proto",
+    "build": "npm run build:copy && npm run build:server && npm run build:client",
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byndyusoft/grpc-tools.git"
+  },
+  "keywords": [
+    "grpc",
+    "protoc",
+    "proto3"
+  ],
+  "author": "Byndyusoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Byndyusoft/grpc-tools/issues"
+  },
+  "homepage": "https://github.com/Byndyusoft/grpc-tools#readme",
+  "dependencies": {
+    "grpc-tools": "^1.9.0",
+    "path-key": "^3.1.1",
+    "protobufjs": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "cpy": "^8.1.0",
+    "grpc": "^1.24.3",
+    "grpc-host-builder": "^4.3.2",
+    "grpc-instrumentum": "^2.0.6",
+    "grpc-pbf-loader": "^1.0.2",
+    "jest": "^26.1.0",
+    "make-dir-cli": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/deps/",
+      "/node_modules/"
+    ]
+  }
+}

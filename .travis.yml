@@ -1,0 +1,29 @@
+language: node_js
+os:
+  - linux
+  - osx
+dist: bionic
+osx_image: xcode12
+node_js:
+  - "10"
+  - "12"
+  - "13"
+  - lts/*
+  - node
+install: npm ci
+script:
+  - npm link
+  - npm run build
+  - npm test
+jobs:
+  include:
+    - stage: deploy
+      if: branch = master && commit_message !~ /no-deploy/ && env(TRAVIS_PULL_REQUEST) = false
+      node_js: lts/*
+      install: npm ci
+      script: npm run build:copy
+      deploy:
+        provider: npm
+        email: litichevskiydv@gmail.com
+        api_key:
+          secure: jR5raNzfHgAMXZ1fPF+M9HL8XhYEi4xXfkxF/p3gK4/tuiGPi73FcQ+o3fcE3HCKXK97NKiLPhQ3rwBOEOabIQZcV284MneSZtw4HXOVxwLKbgJSArPwJkIB0maBPF53sz/MkxXJ95g3Q82BX3e1ZLwWifZP9cHWYvqlb9zUHjx1eXdsSorew2pTW/ImdIpgAPZn3obDOv8+ym+8x1/aUEAyCOKlJVLwaeTWwIqS93GLtUTvySgiey2Jk6MAc+ahQ0UU+8ROOzCd1fovvKmSZOTwTJzn7t3OiSk5g9bDwL5RMwuRFd/Y6tHWFS+S3hxr6FL6E4Hw7qRxfNwkBIrcA7sZfTbll7Nd66ankHZrXw7gMdR98Jq5UqweUeEJ6jSdwpoRprh4TCgjgISZcKL1ezDWOHOB+eNb3xJRm1UxZf8Khz0ft/M63tWzG4inC84LxpsjayTRhke+FOJWb1uW/rX3vV195wGqODgGTfrAeR0Uu7u+n0igUCMvh5bk8jHNu3vZgFrHqJMWSF/xKCLhnTyrD9ActoGA5e+yMd6RMYdxnSPZmNKenwdBTErmiChqNoL310FjoK/Tpx9KNOI9ut63+0kOVY8Vurg+vcjGZ7AW2Ceg6+RAQ1epTjT0tIgXDKA6+eqRUSNR82t4joXYaenexZ2VwiyIqbYC+7KiH3w=
