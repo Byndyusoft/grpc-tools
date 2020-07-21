@@ -7,7 +7,7 @@
 
 A set of tools to simplify working with protobuf.js, protoc and its plugins.
 
-**Why:** generating code from proto files is a rather tricky thing because various utilities (protoc itself, pbjs, etc) has a lot of various options and it is also necessary to set proper include and plugins paths. More over some well known proto files, such as datetime.proto, openapiv2.proto and others are the part of the other repositories and packages, so in order to use them, you have to copy them to your repository every time. As a result, you ought to perform a lot of routine every time.
+**Why:** generating code from proto files is a rather tricky thing because various utilities (protoc itself, pbjs, etc) have a lot of various options and it is also necessary to set proper include and plugins paths. Moreover some well known proto files, such as datetime.proto, openapiv2.proto and others are the part of other repositories and packages, so in order to use them, you have to copy them to your repository every time. As a result, you ought to perform a lot of routine every time.
 
 **What:** grpc-tools was created to simplify code generation and provide default include paths with well known proto files.
 
@@ -70,11 +70,11 @@ For Node.js code formatting is suggested to use [prettier](https://github.com/pr
 
 ### build
 
-- configs for Visual Studio Code.
+- scripts for the CI build process
 
-### .vscode
+### deps
 
-- configs for Visual Studio Code.
+- repository submodules
 
 ### src
 
