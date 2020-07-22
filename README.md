@@ -118,5 +118,5 @@ $ npm t
 @Byndyusoft/owners: https://github.com/orgs/Byndyusoft/teams/owners
 
 Team maintainers:
-@razonrus iruslansafin@gmail.com
-@litichevskiydv litichevskiydv@gmail.com
+@razonrus ruslan.safin@byndyusoft.com
+@litichevskiydv dmitry.litichevskiy@byndyusoft.com
