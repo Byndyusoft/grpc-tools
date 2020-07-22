@@ -1,6 +1,7 @@
 skip_commits:
   files:
     - LICENSE
+    - CONTRIBUTING.md
     - README.md
     - .travis.yml
 environment:
