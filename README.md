@@ -29,6 +29,14 @@ A set of tools to simplify working with protobuf.js, protoc and its plugins.
 
 # Usage
 
+In our perfect world code generation is a part of build process, which can be started locally by developer and remotely by CI/CD. So there is no need to store artifacts of the proto files building in a repos, our package is helping easily automate this process. We recommend the following use case:
+
+- install package to the `devDependencies` section of `package.json`
+- add `build` script in the `scripts` section of `package.json`, which describe code generation process using the commands provided by our package
+- execute code generation by running `npm run build`
+
+Short description of the commands provided by our package are listed below.
+
 ## js-protoc-gen
 
 Generates js files from proto files via `pbjs` from [protobuf.js](https://github.com/protobufjs/protobuf.js) providing default include path. Code generation can be started by command
