@@ -101,7 +101,7 @@ For Node.js code formatting is suggested to use [prettier](https://github.com/pr
 - Implement tool logic in `src`
 - Add or addapt unit-tests (prefer before and simultaneously with coding)
 - Add or change the documentation as needed
-- Open pull request in the correct branch. Target the project's `develop` branch
+- Open pull request in the correct branch. Target the project's `master` branch
 
 ## Unit testing
 
