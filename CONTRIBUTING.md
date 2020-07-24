@@ -44,11 +44,11 @@ to explicitly tell Git to download the contents of the repository submodules:
 
 ### Creating a branch
 
-Branches master and develop are protected. To make your change, create a new branch from develop. You must pull the develop branch.
+Branch `master` is protected. To make your change, create a new branch from it. You must pull the `master` branch.
 
 ```shell
- git checkout develop
- git pull origin develop
+ git checkout master
+ git pull origin master
 ```
 
 For create new branch, you can do :
@@ -75,10 +75,10 @@ Now, you can write code. For help you, you can read [README](README.md) or ask [
 
 ### Merging your code
 
-After coding, you can't merge your code to develop because this branch is protected. To do this, you must create a Pull Request from your branch to develop.
+After coding, you can't merge your code to `master` because this branch is protected. To do this, you must create a Pull Request from your branch to `master`.
 
 For accepting, each Pull Request must satisfy the following conditions:
 
-1.  The merge to develop should not have conflict. You can execute `git rebase origin/develop`
+1.  The merge to `master` should not have conflict. You can execute `git rebase origin/master`
 2.  Tests are enriched and tests are executed with success
 3.  Documentation are enriched
