@@ -2,8 +2,8 @@
   "editor.formatOnSave": true,
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "vsicons.presets.angular": false,
   "search.exclude": {
+    "deps": true,
     "**/.idea": true,
     "**/build": true,
     "**/node_modules": true,
@@ -11,9 +11,7 @@
     "**/yarn.lock": true
   },
   "protoc": {
-        "path": ".\\node_modules\\grpc-tools\\bin\\protoc.exe",
-        "options": [
-            "--js_out=import_style=commonjs"
-        ]
-    }
+    "path": ".\\node_modules\\grpc-tools\\bin\\protoc.exe",
+    "options": ["--js_out=import_style=commonjs"]
+  }
 }
