@@ -8,7 +8,7 @@ const { execFileSync } = require("child_process");
 
 const env = { ...process.env };
 const pathKeyName = pathKey({ env });
-env[pathKeyName] = process.mainModule.paths
+env[pathKeyName] = require.main.paths
   .map((x) => path.join(x, "grpc-tools", "bin"))
   .concat(__dirname, env[pathKeyName])
   .join(path.delimiter);
