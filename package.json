@@ -1,6 +1,6 @@
 {
   "name": "@byndyusoft/grpc-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of tools to simplify working with gRPC",
   "publishConfig": {
     "access": "public"
