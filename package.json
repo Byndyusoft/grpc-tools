@@ -1,6 +1,6 @@
 {
   "name": "@byndyusoft/grpc-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of tools to simplify working with gRPC",
   "publishConfig": {
     "access": "public"
@@ -44,18 +44,19 @@
   },
   "homepage": "https://github.com/Byndyusoft/grpc-tools#readme",
   "dependencies": {
-    "grpc-tools": "^1.9.0",
-    "path-key": "^3.1.1",
-    "protobufjs": "^6.10.0"
+    "find": "^0.3.0",
+    "find-node-modules": "^2.1.2",
+    "grpc-tools": "^1.10.0",
+    "protobufjs": "^6.10.2"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.4",
-    "cpy": "^8.1.0",
-    "grpc": "^1.24.3",
+    "@types/jest": "^26.0.20",
+    "cpy": "^8.1.1",
+    "grpc": "^1.24.5",
     "grpc-host-builder": "^4.3.2",
     "grpc-instrumentum": "^2.0.6",
     "grpc-pbf-loader": "^1.0.2",
-    "jest": "^26.1.0",
+    "jest": "^26.6.3",
     "make-dir-cli": "^2.0.0"
   },
   "jest": {
